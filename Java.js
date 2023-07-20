@@ -14,7 +14,7 @@ Num1++; // Not really 100% sure on this code not very well explained all i know 
 Num1--; // It also works the same with with Taking 'one' away
 let Decimal = 5.3; // These are called floats (Decimal)
 
-//Assignements 
+//Assignements ------------------------------------------
 
 // If we have a varible such 
 let Num8 = 2; //This Number 8 Varible = 2, due to it being a let varible we can add to it.
@@ -24,5 +24,50 @@ console.log (Num8); // we can Print this Varible in the Console to check the new
 // This also works both ways for Taking away -
 let Num9 = 8;
 Num9 -= 4;
-console.log (Num9)
+console.log (Num9);
 // For example see above if this was put into a console the vaule would be = 4 
+
+// Also works for multiplication
+let Num10 =2; 
+Num10 *= 5;
+console.log(Num10); 
+// 5 * 2 = 10 
+
+// Same for Division 
+let Num11 =8; 
+Num11 /= 2;
+console.log(Num11)
+// 8 / 2 = 4
+
+// Strings ------------------------------------------
+const myStr = "I am a \"double quoted\" string inside \"double quotes\"."; 
+console.log(myStr)
+// This wasnt very clear to me in the tutorial, all i know is you can break out of the double quote by using a backslash.
+
+// \'	single quote
+// \"	double quote
+// \\	backslash
+// \n	newline
+// \t	tab
+// \r	carriage return
+// \b	backspace
+// \f	form feed
+
+// Theses are used to constimise strings and how they are shown to the user. 
+
+const MyName = "Charlie";
+const Mystr ="My Name Is" + MyName + "and I am Well!";
+// You can add Strings to Varibles and add them into code as show above treat the + as a space 
+let First ="Learning Code is";
+let Second ="fun but hard!"
+// see the two varible types here i am chaging so it has to be let
+First += Second; //we can add two strings together to make a sentence as seen here. 
+console.log(First,Second) // Can print it as shown 
+
+// Setup
+let lastNameLength = 0;
+const lastName = "Lovelace";
+
+// Only change code below this line
+lastNameLength = lastName.length; 
+//See here we are using the .length code to count how many characters are in "Lovelace" which is 8 and using it for the vaule of lastnamelength
