@@ -71,3 +71,17 @@ const lastName = "Lovelace";
 // Only change code below this line
 lastNameLength = lastName.length; 
 //See here we are using the .length code to count how many characters are in "Lovelace" which is 8 and using it for the vaule of lastnamelength
+
+let firstLetterOfLastName = "";
+const lastName2 = "Lovelace"; // so the question here it find the first letter of the LastName2 
+firstLetterOfLastName = lastName2[0]; //quite a simple one, the value of firstLetterOfLastName will be L as thats the first character of LoveLace as used in LastName2
+
+
+let myStr2 = "Jello World";
+myStr2 = "Hello World"; //String can not be changed or added vaule they can only be changed by reassinging a new vaule, these are known as Immutable
+
+const LastName2 = "Lovelace";
+const thirdLetterOfLastName = lastName2[2]; // This i call is a grab, it pulls the third letter of Lastname2 keep in mind computers start counting from 0 so 1st will be 0 and so on+
+
+const myLastName = "Matthews";
+const lastLetterOfLastName = lastName[lastName.length - 1]; // use expression to find the last letter of the of the input 
