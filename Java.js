@@ -85,3 +85,9 @@ const thirdLetterOfLastName = lastName2[2]; // This i call is a grab, it pulls t
 
 const myLastName = "Matthews";
 const lastLetterOfLastName = lastName[lastName.length - 1]; // use expression to find the last letter of the of the input 
+
+mypet = "Dog"
+mycat = "Cat"
+
+animals = "My " + mypet + " is lovely but " + mycat + " is nasty! " 
+console.log (animals) //you see here in this example we have printed text and varibles into one string that will be show on the console. becarful of spaces as JS is case sensative!
