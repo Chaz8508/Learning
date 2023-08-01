@@ -91,3 +91,6 @@ mycat = "Cat"
 
 animals = "My " + mypet + " is lovely but " + mycat + " is nasty! " 
 console.log (animals) //you see here in this example we have printed text and varibles into one string that will be show on the console. becarful of spaces as JS is case sensative!
+
+const myNameAndAge = ["Charlie", 22]; //You can assign string and intergers to a value as seen here. This is called a array 
+const myArray = [["Charlie",22],["Jack", 21]]; // you can also nest arrays within other arrays, this is called multi-dimensional array
