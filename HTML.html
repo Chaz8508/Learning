@@ -1,12 +1,41 @@
-<html>
-<head>
-<header> Hello this is my new HTMl Learning Site as i lost the old one...</header>
-</head>
-<body>
-<div class="marker red"></div>
-</body>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colored Markers</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <h1>Learning Colors!</h1>
+    <div class="container">
+      <div class="marker red">
+    </div>
+	<fieldset>
+		<label for="firstname">Enter your First Name:<input id="firstname"/></label>
+		<label for="lastname">Enter your Last Name:<input id="lastname"/></label>
+		<label for="email">Enter your Eamil:<input id="email"/></label>
+		<label for="password">Enter your Password:<input id="password"/></label>
+	</fieldset>
+  </body>
 </html>
 <style>
-	.red {background: linear-gradient(90deg) #ff0011, #0dff00;}
-	.marker {width: 200px;height: 25px; margin: 10px auto;}
+	h1 {
+  text-align: center;
+}
+
+.container {
+  background-color: rgb(255, 255, 255);
+  padding: 10px 0;
+}
+
+.marker {
+  width: 200px;
+  height: 25px;
+  margin: 10px auto;
+}
+.red {
+  background: linear-gradient(90deg, #ff0000 , #ff4d00 , #ff8400 ,#fff700 );
+} /* This is used to create a gradient 90deg is the gradient direction this is sideways 180deg is up and down */
+
 </style>
