@@ -15,13 +15,24 @@
       <div class="marker red">
     </div>
 	<fieldset> <!--This is a feildset, this is used as a input form such as username / password. as you can see below we are entering the id/label-->
-		<label for="firstname">Enter your First Name:<input id="firstname"/></label>
+		<label for="firstname">Enter your First Name:<input id="firstname" required /></label> <!-- This required tag makes it so the user can not leave it blank  -->
 		<label for="lastname">Enter your Last Name:<input id="lastname"/></label>
 		<label for="email">Enter your Eamil:<input id="email" type="email"/></label> <!--We can define a 'type' of what we want entered into this input box-->
-		<label for="password">Enter your Password:<input id="password" type="password"/></label> <!--Same here with type password it will show up blacked out when typed-->
-	</fieldset>
+		<label for="password">Enter your Password:<input id="password" type="password" minlength="8" /></label> <!--Same here with type password it will show up blacked out when typed-->
+	<label><input type="checkbox" required></label> <!-- Can input Diffrent things not just text buttons with actions also using inputs -->
+  </fieldset>
+  <input type="submit" value="Submit"> <!--This is a input button which submits all of the data above-->
+<label for="Business-Account"><input type="checkbox" id="Business-Account"></label> <!-- It is often best practice to use the for and id elements on labels and inputs  -->
+<p>Hello This is a Link Click <a href="https://www.freecodecamp.org/news/terms-of-service/">Here</a></p>
+<label><input type="file">Upload a profile picture: </label> <!-- Here we can get a idnivicual to upload a image using the input upload -->
+<label>Input your age (years): <input min="13" max="120" type="number"></label> <!-- you can force people to input diffrent details using the input element -->
+<select>
+  <option>1</option>
+  <option>2</option> <!-- You can add a drop down bar  -->
+  <option>3</option>
+</select>
 
-  </body>
+</body>
 </html>
 
 
