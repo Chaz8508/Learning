@@ -96,5 +96,6 @@ const myNameAndAge = ["Charlie", 22]; //You can assign string and intergers to a
 const myArray = [["Charlie",22],["Jack", 21]]; // you can also nest arrays within other arrays, this is called multi-dimensional array
 
 
+
 const myArray2 = [18, 64, 99];
 myArray2 [0] = 45; //as you can see here we can change the vaules of the array remember the Computer counts 0 as 1 so it gots 0 1 2 3 4 
