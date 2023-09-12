@@ -1,0 +1,93 @@
+
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply some basic styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #99999986;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #333;
+    color: #f70808;
+    padding: 1rem 0;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center; /* Aligns your Text center or left right */
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    color: #fff;
+}
+
+section {
+    padding: 2rem;
+    background-color: #fff;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    text-align: center; /* Aligns your Text center or left right */
+    background-color: #c2c2c2;
+    color: #fff;
+    border-radius: 5px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    padding-left: 10px;
+}
+
+p {
+    padding-left: 10px;
+}
+
+.top {
+    text-align: center; /* Aligns your Text center or left right */
+    padding-top: 10px; /* Provides space between two elements */
+}
+
+.item {
+    width: 33.33%; /* This will make each item take up 1/3 of the row */
+    box-sizing: border-box; /* Include padding and border in the width calculation */
+    text-align: center;
+    display: flex; /* Add this to make the text and image display in a row */
+    align-items: center; /* Vertically center the content */
+    justify-content: center; /* Horizontally center the content */
+  }
+
+  .itemimg {
+    max-width: 100%; /* Ensure the image doesn't exceed its container width */
+    height: 80px; /* Maintain the image's aspect ratio */
+    margin-left: 20px; /* Adjust the margin between text and image */
+  }
+  
+.rows {
+    display: flex; /* Makes the Display fit more than 1 thing in it makes it 'flexible' */
+    flex-wrap: wrap;
+  }
+
+  .icon {
+    height: 20px; /*Sets the height of a element */
+    margin-left: 20px; /* Moves the element to which ever direction left,right,top,bottom */
+}
+
+
