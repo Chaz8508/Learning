@@ -193,6 +193,16 @@ for (var i = 0; i < colors.length; i = i+1) {
 }
 // for of loop easier 
 
+/* Types Of Loops 
+
+for - loops through a block of code a number of times
+for/in - loops through the properties of an object
+for/of - loops through the values of an iterable object
+while - loops through a block of code while a specified condition is true
+do/while - also loops through a block of code while a specified condition is true
+
+*/ 
+
 var food = ["grapes","salad","beans","bread","olives"];
 
 for ( var eachItem of food) {
@@ -210,3 +220,137 @@ for ( var i = 0; i < myString.length; i = i+1){
 for (var eachColor of colors) {
     console.log(eachColor);
 }
+
+// While Loops Hard AF
+
+var incrementor = 0;
+var text = "";
+
+while (incrementor < 10){
+    text += "The Incrementor has gone up to " + incrementor + "\n";
+    incrementor++;
+}
+console.log(text);
+
+// Template Literals Easier 
+
+var incrementor = 0;
+var text = "";
+
+while ( incrementor < 10){
+    text += `the incrementor has gone up to ${incrementor} \n`;
+    incrementor++;
+}
+console.log(text);
+
+// STRUCTURED PROGRAMMING
+
+myString = "I am really hungry for some"
+myUpperString = myString.toLocaleUpperCase();
+
+var reallyLocation =myString.search("really");
+var specialWord = myString.substr (reallyLocation, 6);
+
+specialWord = specialWord.toUpperCase();
+var newString = myString = myString.replace("really", specialWord);
+console.log (newString);
+
+/* 
+for (var i = 0; i<foods.length; i++){ // Hard 
+    console.log(`${myString}, ${foods[i]}`)
+} 
+*/
+/* 
+for (var eachFood of foods){    //Easier 
+   console.log(`${myString},${foods[eachFood]}`)
+}
+*/
+
+var foods = ["cheese","pie","breakfast","lunch"]; //Still Dont Really Understand this ngl 
+var myString = "Im really hungry for some";
+
+for (var i=0; i<foods.length; i++){
+   
+if (i & 2 === 0){
+ console.log(`${myString} ${foods[i].toUpperCase}`)
+}
+else {
+    console.log (`${myString} ${foods[i]}`);
+}
+}
+
+// Java Script Basic Challenges 
+// See Page to Created in Folder
+
+// Challenge 7 Still dont understand this, will take some getting used to 
+var wholeNum = prompt("Give me a Whole Number!");
+       
+if (wholeNum < 10){
+console.log("you entered a number more than 10!");
+
+for (var i=0; i<10; i++)
+console.log(`Here is the num_${i}`);
+}
+else if (wholeNum > 9){
+    console.log ("Number is not high enough!")
+}
+else {
+    console.log("Error In the System!")
+}
+//Challenge 8 i just dont understand at all...
+
+//FUNCTIONS! 
+
+function doStuff (){
+    var myString = "Here is a string of text"
+    var upperString = myString.toUpperCase();
+    console.log(myString);
+    console.log(upperString);  
+  }
+ // Passing and returning data  
+
+ function upperMessage (message){
+    var upperMessage = message.toUpperCase();
+    console.log(upperMessage);
+  }
+  // Converts text of upperMessage to Uppercase Text 
+  upperMessage('hello vadim!');
+
+  function addNums(num1,num2){
+    var sum = num1 + num2;
+    console.log(sum);
+    }
+// Basic Adding sum script    
+    addNums(329,421);
+// retunring a varible     
+    function returnSum(num1,num2){ //In 
+        var sum = num1 + num2;
+        return sum; // Out
+    } // Returning sum to outside the function; 
+    console.log(returnSum(10,5) ); //Num 1 and Num 2 
+    //Useful Examples 
+
+    function randomIntGen(min,max){
+        var total = max - min + 1; // 2-6= 4 + 1 = 5
+        console.log(total); // Shows you the total 
+    }
+    randomIntGen (2,6);
+
+    function randomIntGen(min,max){
+        var total = max - min + 1; // Set a min and max then add one to it 
+        var randomNum = Math.random(); // Gives a random num 
+        var randomVal = randomNum * total; // multiply the random number and the total 
+        var rounded = Math.floor(randomVal); // rounds the randomVal to a whole number 
+        var finalNum = min + rounded;// Takes the min vaule and addes it to the rounded 
+    }
+        console.log(finalNum); // Prints the random number to the console
+        
+    //Selecting Data from Arrays using a random data generator 
+        var foods = ["cheese", "chicken", "grapes", "hamburgers"];
+
+        function randomIntGen(min,max){   
+        // Creating a random int from min and max.     
+        return Math.floor((max - min + 1) * Math.random())+ min;
+        // have no clue what this guy in the video is on about
+        }
+        console.log(foods[randomIntGen(0,3)]);
