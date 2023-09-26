@@ -184,7 +184,7 @@ for ( var i = 0; i <= 10; i = i+1){
 console.log (i); // so this is a for loop, it takes the vaule i which is set to 0 checks if its greater that 10 then if not increments it
 }
 
-//Arryas & Loops CONFUSING AF 
+//Arryas & Loops CONFUSING  
 
 var colors = ["red","blue","yellow","green","white","black"];
 
@@ -221,7 +221,7 @@ for (var eachColor of colors) {
     console.log(eachColor);
 }
 
-// While Loops Hard AF
+// While Loops Hard 
 
 var incrementor = 0;
 var text = "";
@@ -354,3 +354,124 @@ function doStuff (){
         // have no clue what this guy in the video is on about
         }
         console.log(foods[randomIntGen(0,3)]);
+
+        //Module 2 Exam Complete Passed! 
+
+        // Week 3 
+        document.getElementById("body").style.color = "red";
+
+        //Styling a element with Java Script!
+
+        var myClass = document.getElementsByClassName("special");
+        for ( var i=0; i<myClass.length; i++){
+           myClass[i].style.color= "red"
+        }
+        // If your styling multiple classes you have to use a forloop as show here for classes called myClass
+        var myClass = document.getElementsByClassName("special");
+        myClass[0].style.color = "red";
+        // if you want to style a single class then use this code as it doesnt need to loop but only 1 speical class element will appear red as it doesnt loop.
+        // because your getting [0] which is not i its the 1st like a array. This is called a collection of elements.
+        // People refer to the elements in a HTML page as the DOM (Document Object Model)
+
+        // DOM queryselector
+
+        /* 
+        <div id="special">
+        <p class="someclass">Paragraph 1</p>
+        </div>
+        */
+        var myText = document.querySelector("#special .someclass");
+        myText.style.color= "red";
+        // This line of code would find your div #special then find the class someclass
+
+        /* 
+        <div id="special">
+        <p>Paragraph 1</p>
+        <p>Paragraph 2</p>
+        <p>Paragraph 3</p>
+        </div>
+        */
+        var myText = document.querySelectorAll("#special p");
+        for (var i=0; i<myText.length; i++){
+            myText[i].style.color = "red"
+        }
+
+        // Query Selector all allows you to get groups of elements
+
+        // INNER HTML
+        var myDiv = document.getElementById("special");
+        myDiv.innerHTML ="<p>Hello this is brand new from JAVA!</p>"
+        // inner HTML can be used to inject new HTML into the document you are editing. 
+
+        var myCheckbox = document.querySelector("input"); // Creating a var assigning the vaule from the HTML doc
+        myCheckbox.setAttribute("checked","checked"); // Setting the attribute "checked" to "checked"
+        // Set attribute can be used to change HTML elements attributes as here showing a checkbox 
+
+          // Adding Elements and Text
+        var myTag = document.createElement("p");// Create a new <p> element and store it in the variable 'myTag'
+        var myText = document.createTextNode("THIS IS MY NEW P Created in JAVA Script!");// Create a new text node containing the specified text and store it in 'myText'
+        myTag.appendChild(myText);// Append the 'myText' node as a child to the 'myTag' <p> element
+        var myDiv = document.querySelector("div");// Find the first <div> element in the HTML document and store it in 'myDiv'
+        myDiv.appendChild(myTag);// Append the 'myTag' <p> element as a child to the 'myDiv' <div> element
+        
+         // Removing Divs 
+        var myDiv = document.querySelector("div");
+        myDiv.removeChild(myDiv.children[1]);
+
+    // CATUPTING EVENTS!
+// <button> Dont Press Me </button> 
+
+var btn = document.querySelector("button"); //Selecting the Button 
+
+function ouch(){
+  alert ("Oh No you Didnt!"); // Alert 
+}
+btn.onclick = ouch; // once the button is pressed 
+
+// will bring up a alert saying 'Oh no you didnt!' 
+
+// Evenet listeners 
+
+var btn = document.querySelector("button"); //Selecting the Button 
+
+function ouch(){
+  alert ("Oh No you Didnt!"); // Alert 
+}
+btn.addEventListener("click",ouch); // Adding a event listener that is looking for a click then it will run function 'ouch'
+
+// Easier 
+
+var btn = document.querySelector("button"); //Selecting the Button 
+
+btn.addEventListener("click", function (){alert("I told you not too!")}); // Can get rid of the function tab and put it in here instead. 
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+// Helpful 
+
+// Style a HTML Class 
+var myClass = document.getElementsByClassName("special");
+myClass[0].style.color = "red";
+
+
+
+
+
+// CONFUSING SECTION HELP
+
+var allPs = document.getElementsByTagName("p"); // Creating the varible and assgning all the p elements to allPs
+for (var i=0; i<allPs.length; i++) { // for loop creating a var called i giving it the value of 0 then saying that allPs is greater than i the for
+    allPs[i].style.color = "green" // Loop will stop, then after i++ making it increiment each time, then styling allPs and [i] color green 
+}

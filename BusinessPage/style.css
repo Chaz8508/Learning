@@ -71,7 +71,7 @@ p {
     margin-left: 10px; 
 }
 
-.cheader {
+.center {
     text-align: center;
 }
 
@@ -130,4 +130,14 @@ p {
     color: #555;
     text-align: left;
     flex-grow: 1;
+}
+
+button {
+    margin-top: 20px;
+    text-align: center;
+    height: 50px;
+    width: 200px;
+    border-radius: 5px;
+    border-color: #d4d4d462;
+    font-size: 20px
 }
