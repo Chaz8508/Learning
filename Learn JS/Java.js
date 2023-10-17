@@ -445,11 +445,146 @@ var btn = document.querySelector("button"); //Selecting the Button
 
 btn.addEventListener("click", function (){alert("I told you not too!")}); // Can get rid of the function tab and put it in here instead. 
 
+// Envent Objects 
 
-        
+var btn = document.querySelector("button"); // Finding the Button 
 
+btn.addEventListener("click", function(event){ //adding event listener for the "click" action. Function called "Event"
+    event.target.style.backgroundColor = "red"; // On event target style background = "red"
 
+    alert("I Told you not to press me!") // Produces a Alert to the user
+})
 
+var link = document.querySelector("a"); // Finding the a html element assign it to link
+
+link.addEventListener("click",function (event){ // link add event listener which is a function for click then proceeds with function event 
+event.preventDefault(); //event prevents the function 
+alert("No Google for you!")// show alert 
+});
+
+//<form method="gets">
+//<label>Your Name: <input type="text" name="name"></label>
+//<input type="submit" value="send">
+//</form>
+
+var myForm = document.querySelector("form"); //getting the form assgining it to varible my form 
+myForm.addEventListener("submit", function(event){ //my Form submit so once the form has been submitted 
+    event.preventDefault(); //Preventing the E function 
+    var formData = document.querySelector("input").value; //creating new var for the from data, using the input elements 
+    alert(formData);// Presenting the Data to you as a alert 
+})
+
+// Mouse Over Elements
+
+var heading = document.querySelector("h1") // getting the h1 element 
+var box =document.querySelector("div") // getting the div element
+
+box.addEventListener("mouseover", function(){ //when you mouse over the box (div) element
+    heading.innerHTML="Mouse is over the box!"; // Change the H1 element to the text shown 
+});
+
+box.addEventListener("mouseout", function(){ // when mouse is out of the div 
+    heading.innerHTML="Mouse is out of the box!)" // change the H1 element 
+});
+
+heading.addEventListener("mouseover", function(){ // heading mouse over
+    heading.innerHTML = "Roll your mouse over the box!"; // Change the h1 element
+});
+
+// Scroll Events 
+
+var pagetop; // Creating a var 
+ 
+window.addEventListener("scroll", function(){ // adding a function which occurs when you scrolls
+   pagetop = window.pageYOffset;// assinging the var a vaule of the pages yoffset 
+   console.log(pagetop); // console logging it out to the user
+})
+
+window.addEventListener("resize",function(){ // Creating a var with event listner resize calls a function
+    console.log(`The window width is ${window.innerWidth}`); //console log the width
+    console.log(`The window height is ${window.innerHeight}`); // console log the height
+ });
+ // Capturing Key Events 
+ document.addEventListener("keydown", function (key){ //event listening for keydowns function called key 
+    alert(` ${event.key} Key was pressed!`); // Then shows a alert to the user saying what key they pressed 
+})
+
+// Scope in JS 
+
+var aVar = "This is the Global Scope!"; // Declairing a Global Var 
+function testScope(){ 
+    var aVar ="This is the Local Scope!"; //Declairing a Local Varible inside a function
+    console.log(aVar);
+}
+testScope();
+console.log(aVar);
+
+(function(){}()) // This will run a function in local scope not global
+ 
+// Simple JS Scripts 
+
+//Module 4! 
+// Project 1 Miles to Kilometers 
+
+document.getElementById("convert").addEventListener("submit", function (event){
+
+    event.preventDefault();
+	var distance = parseFloat(document.getElementById("distance").value);
+    var answer = document.getElementById("answer");
+
+	if (distance){
+		var convert = (distance * 1.609344).toFixed(3);
+		
+		
+		answer.innerHTML = `<h2>${distance} miles converts to ${convert} kilometers</h2>`;
+    }
+	else {
+    
+	 answer.innerHTML = "<h2>Please Provide a Number!</h2>"
+	}
+	});
+// Project 2
+var  convertType = "miles"; 
+var  heading = document.querySelector("h1");
+var intro = document.querySelector("p");
+var asnwerDiv = document.getElementById("answer");
+var form = document.getElementById("convert");
+
+document.addEventListener("keydown", function(event){
+var key = event.code;
+
+if (key === "KeyK"){
+	convertType = "kilometers";
+	heading.innerHTML = "Kilometres to Miles Converter";
+	intro.innerHTML = "Type in Kilometres and it will get tunred into Miles!";
+
+}
+else if (key === "KeyM"){
+	convertType = "miles";
+	heading.innerHTML = "Miles to Kilometres Converter";
+	intro.innerHTML = "Type in Miles and it will get tunred into Kilometres!";
+}
+});
+
+form.addEventListener("submit",function(event){
+event.preventDefault();
+var distance = parseFloat(document.getElementById("distance").vaule);
+
+if (distance) {
+if(convertType == "miles"){
+
+var converted = (distance * 1.609344).toFixed(3);}
+answer.innerHTML = `${distance} Miles Converts to ${converted} Kilometers`;
+		}
+else {
+	answer.innerHTML = "<h2>Please provide a number!</h2>";
+
+var converted = (distance * 0.621371192).toFixed(3);
+answer.innerHTML = `${distance} Kilometres Converts to ${converted} Miles`
+}
+
+});
+// This didnt work at all, said NA whenever submit was clicked... Needs Fixing!
 
 
 
