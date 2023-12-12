@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <title>My Website</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
     <header>
         <nav>
             <ul>
@@ -11,51 +16,47 @@
             </ul>
         </nav>
     </header>
-<head>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-</head>
-
-<body>
-    <div class="title">
-        <h1>Welcome to Art Work</h1>
-    </div>
-
+    <h1>Welcome</h1>
+    <header>
+        <p>This is a showcase of all my Hobbies!</p>
+    </header>
     <main>
-        <section class="artwork">
-            <h2>Featured Artwork</h2>
-            <div class="featured-thumbnail">
-                <img src="Imgs/1457306.jpg" alt="Thumbnail Image" onclick="expandImage(this)">
-            </div>
-        </section>
-        <h2>More Art Work</h2>
         <section class="gallery">
             <div class="thumbnail">
-                <img src="Imgs/1457318.jpg" alt="Artwork 1" onclick="expandImage(this)">
+                <img src="Imgs/WoW/Gate.jpg" alt="Artwork 1" onclick="expandImage(this)">
             </div>
             <div class="thumbnail">
-                <img src="Imgs/1.jpg" alt="Artwork 2" onclick="expandImage(this)">
+                <img src="Imgs/WoW/Demon.jpg" alt="Artwork 2" onclick="expandImage(this)">
             </div>
             <div class="thumbnail">
-                <img src="imgs/2.jpg" alt="Artwork 3" onclick="expandImage(this)">
+                <img src="Imgs/WoW/Lich.jpg" alt="Artwork 3" onclick="expandImage(this)">
             </div>
             <div class="thumbnail">
-                <img src="imgs/3.jpg" alt="Artwork 4" onclick="expandImage(this)">
-            </div>
-            <div class="thumbnail">
-                <img src="imgs/4.jpg" alt="Artwork 5" onclick="expandImage(this)">
-            </div>
-            <div class="thumbnail">
-                <img src="imgs/5.jpg" alt="Artwork 6" onclick="expandImage(this)">
+                <img src="Imgs/WoW/Wrath.jpg" alt="Artwork 4" onclick="expandImage(this)">
             </div>
         </section>
+        <section>
+            <h1>Combat Sports</h1>
+            <p class="p2">Having always loved Martial arts and combat sports since i was young and seeimg to always have a natural nack for it</p>
+             <div class="flex">
+              <button class="button2">Judo</button> 
+              <button class="button2">Boxing</button> 
+              <button class="button2">Kick Boxing</button>
+             </div>
+        </section>
     </main>
-
     <footer>
         <p>Produced By @Charlie Matthews</p>
     </footer>
+</body>
 
-    <script>
-        function expandImage(element) {
+<div>
+
+</div>
+
+</html>
+<script>
+         function expandImage(element) {
             var expandedImage = document.createElement('div');
             expandedImage.classList.add('expanded-image');
             var img = document.createElement('img');
@@ -65,13 +66,35 @@
             expandedImage.addEventListener('click', function () {
                 document.body.removeChild(expandedImage);
             });
-        }
-    </script>
-</body>
-
-</html>
+        }   
+</script>
 
 <style>
+
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(Imgs/Background.jpeg);
+}
+
+.under{
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5px;
+    background: none;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: #333;
+    }
 
     .thumbnail img.expanded {
             transform: scale(1.2);
@@ -136,73 +159,89 @@
         align-items: center;
     }
 
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-image: url(Imgs/Background.jpeg);
-    }
+h1 {
+font-size: 40px;
+text-align: center;
+background-color: #ffffff55;
+margin-left: auto;
+margin-right: auto;
+width: 300px;
+border-radius: 5px;
+padding: 5px;
+}
 
-    button {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 5px;
-    background: none;
+.button2 {
+    background-color: rgb(46, 122, 141);
+    padding: 10px 20px;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
+    font-weight: bold;
+}
+
+header {
     background-color: #333;
-    }
+    color: #fff;
+    padding: 2px 0;
+    text-align: center;
+}
 
-    h1 {
-        font-size: 40px;
-        padding-left: 40px;
-    }
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    font-weight: bold;
+    padding: 2px;
+}
 
-    header {
-        background-color: #333;
-        color: #fff;
-        padding: 2px 0;
-    }
+nav ul li a {
+    color: #ff0000;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+}
 
-    nav ul {
-        list-style-type: none;
-        padding: 0;
-        display: flex;
-        justify-content: space-around;
-        font-weight: bold;
-        padding: 2px;
-    }
+main {
+    padding: 20px;
+    
+    
+}
 
-    nav ul li a {
-        color: #ff0000;
-        text-decoration: none;
-        font-size: 20px;
-        font-weight: bold;
-    }
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 2px 0;
+    position: fixed;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+}
+.center {text-align: center;}
 
-    main {
-        padding: 20px;
-    }
+.img {
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 
-    footer {
-        background-color: #333;
-        color: #fff;
-        text-align: center;
-        padding: 2px 0;
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-    }
+.p2 {
+    text-align: center;
+    font-weight: bold;
+    background-color: rgb(170, 170, 170);
+    border-radius: 5px;
+    width: 70%;
+    margin: auto;
+}
 
-    .center {
-        text-align: center;
-    }
+.flex {
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 100px;
+    padding-top: 25px;
+}
 
-    .img {
-        width: 50%;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
 </style>
